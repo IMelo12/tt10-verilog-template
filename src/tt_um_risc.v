@@ -20,7 +20,7 @@ wire [6:0] input_address = ui_in[7:1];
 wire [7:0] input_data = uio_in;
 wire [7:0] debug_wire;
 
-(* dont_touch = "true" *) risc cpu (
+(*keep_hierarchy*) risc cpu (
     .clk(clk),
     .rst_n(rst_n),
     .inst_address(input_address),
